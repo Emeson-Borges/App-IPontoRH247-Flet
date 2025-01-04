@@ -178,7 +178,7 @@ def criar_tela_cadastrar_funcionario(page):
 
     voltar_btn = ft.TextButton(
         text="Voltar",
-        on_click=lambda e: page.go("/"),
+        on_click=lambda e: page.go("/administracao"),
         style=ft.ButtonStyle(color=ft.Colors.BLUE),
     )
 

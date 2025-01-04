@@ -7,6 +7,11 @@ from telas.tela_administracao import criar_tela_administracao  # Importa a tela 
 from telas.tela_registro_ponto import criar_tela_registro_ponto  # Importa a tela de registro de ponto
 from telas.tela_prova_vida import criar_tela_prova_vida
 from telas.tela_cadastrar_funcionario import criar_tela_cadastrar_funcionario
+from telas.tela_sincronizar_batidas import criar_tela_sincronizar_batidas
+from updates_entidades import atualizar_entidades
+from telas.tela_config_entidade import criar_tela_config_entidade
+
+
 
 
 from criar_tabelas import criar_tabelas
@@ -110,6 +115,7 @@ conn = sqlite3.connect("banco_dados.db")
 def main(page: ft.Page):
     # Chamar a função para criar ou atualizar as tabelas no banco de dados
     criar_tabelas(DB_PATH)
+    atualizar_entidades(DB_PATH)
     
     
     # Configurações da página
@@ -182,6 +188,10 @@ def main(page: ft.Page):
                     ],
                 )
             )
+        elif rota == "/config_entidade":
+            page.views.append(criar_tela_config_entidade(page, db_path="banco_de_dados.db"))
+        elif rota == "/sincronizar":
+            page.views.append(criar_tela_sincronizar_batidas(page, DB_PATH))
         elif rota == "/cadastrar_funcionario":
             page.views.append(criar_tela_cadastrar_funcionario(page))
         elif rota == "/login":

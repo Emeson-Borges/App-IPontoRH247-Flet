@@ -108,7 +108,7 @@ def criar_tela_administracao(page):
                     criar_card("autorenew", "Sincronizar", "Sincronizar pontos", "/sincronizar"),
                     criar_card("schedule", "Frequência Diária", "Veja seu espelho de ponto", "/frequencia"),
                     criar_card("event_note", "Lembretes", "Acesse seus lembretes", "/lembretes"),
-                    criar_card("folder", "Documentos", "Acesse seus documentos", "/documentos"),
+                    criar_card("settings", "Entidade", "Configurar entidade", "/config_entidade"),
                     criar_card("supervised_user_circle", "Funcionários", "Cadastrar funcionários", "/cadastrar_funcionario"),
                     criar_card("fingerprint", "Ponto Facial", "Acesse o ponto facial", "/ponto_facial"),
                 ],

@@ -24,6 +24,18 @@ SQLS = {
             nome VARCHAR(200) NOT NULL
         );
     """,
+    
+    "CREATE_TABLE_ENTIDADE_CONFIGURADA": """
+        CREATE TABLE IF NOT EXISTS entidades_configuradas (
+            id INTEGER PRIMARY KEY NOT NULL, 
+            entidade_id INTEGER NOT NULL,
+            estado_id INTEGER NOT NULL,
+            cidade_id INTEGER NOT NULL,
+            codigo_igbe VARCHAR(200) NOT NULL,
+            name VARCHAR(200) NOT NULL
+        );
+    """,
+    
 
     "CREATE_TABLE_FUNCIONARIOS": """
         CREATE TABLE IF NOT EXISTS funcionarios (
